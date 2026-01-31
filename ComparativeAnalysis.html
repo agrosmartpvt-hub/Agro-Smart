@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Comparative Analysis | AgroSmart</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg:#f0f8f5;
+      --text:#0f2d1c;
+      --muted:#4b5a4d;
+      --card:#e6f2ea;
+      --accent:#2e7d32;
+      --radius:22px;
+    }
+
+    *{box-sizing:border-box;margin:0;padding:0}
+
+    body{
+      font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;
+      background:var(--bg);
+      color:var(--text);
+    }
+
+    /* NAV */
+    nav{
+      position:sticky;
+      top:0;
+      background:rgba(240,248,245,.9);
+      backdrop-filter:blur(14px);
+      border-bottom:1px solid #cde1d4;
+      z-index:10;
+    }
+
+    .nav-inner{
+      max-width:1200px;
+      margin:auto;
+      padding:14px 24px;
+      display:flex;
+      justify-content:center;
+      gap:18px;
+      font-weight:500;
+    }
+
+    .nav-inner a{
+      color:var(--accent);
+      text-decoration:none;
+      position:relative;
+      font-size:14px;
+    }
+
+    .nav-inner a::after{
+      content:"";
+      position:absolute;
+      left:0;
+      bottom:-4px;
+      width:0;
+      height:2px;
+      background:var(--accent);
+      transition:width .3s ease;
+    }
+
+    .nav-inner a:hover::after{width:100%;}
+
+    /* HERO */
+    .hero{
+      text-align:center;
+      padding:80px 24px 40px;
+    }
+
+    .hero h1{
+      font-size:clamp(42px,6vw,76px);
+      margin-bottom:14px;
+      animation:fadeUp 1s ease forwards;
+    }
+
+    .hero p{
+      max-width:760px;
+      margin:auto;
+      font-size:18px;
+      color:var(--muted);
+      animation:fadeUp 1.2s ease forwards;
+    }
+
+    /* TABLE */
+    .table-wrap{
+      max-width:1200px;
+      margin:60px auto 100px;
+      padding:0 20px;
+      overflow-x:auto;
+    }
+
+    table{
+      width:100%;
+      border-collapse:separate;
+      border-spacing:18px;
+    }
+
+    th, td{
+      background:var(--card);
+      border-radius:var(--radius);
+      padding:22px;
+      text-align:center;
+      vertical-align:top;
+      box-shadow:0 14px 34px rgba(0,0,0,.08);
+      animation:fadeUp 1.3s ease forwards;
+    }
+
+    th{
+      font-size:20px;
+      font-weight:700;
+    }
+
+    td strong{
+      display:block;
+      margin-bottom:6px;
+    }
+
+    .price{
+      font-size:24px;
+      font-weight:700;
+      color:var(--accent);
+    }
+
+    footer{
+      background:#dff3e0;
+      text-align:center;
+      padding:36px 24px;
+      font-size:14px;
+      color:#4b5a4d;
+    }
+
+    @keyframes fadeUp{
+      from{opacity:0;transform:translateY(20px)}
+      to{opacity:1;transform:translateY(0)}
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html">Home</a>
+    <a href="Products.html">Products</a>
+    <a href="Vision.html">Vision</a>
+    <a href="#app">App</a>
+    <a href="#order">Order</a>
+    <a href="Contact.html">Contact</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <h1>Comparative Analysis</h1>
+  <p>Compare Smart Pot models side by side to choose the perfect plant companion.</p>
+</section>
+
+<div class="table-wrap">
+  <table>
+    <tr>
+      <th>Feature</th>
+      <th>Smart Pot</th>
+      <th>Smart Pot Pro</th>
+      <th>Smart Pot Pro Max</th>
+    </tr>
+
+    <tr>
+      <td><strong>Price</strong></td>
+      <td class="price">₹7,000</td>
+      <td class="price">₹9,000</td>
+      <td class="price">₹11,000</td>
+    </tr>
+
+    <tr>
+      <td><strong>Design</strong></td>
+      <td>Minimal & Compact</td>
+      <td>Premium & Customizable</td>
+      <td>Luxury Flagship Finish</td>
+    </tr>
+
+    <tr>
+      <td><strong>Why It’s Special</strong></td>
+      <td>Automatic basic care</td>
+      <td>Manual + Auto flexibility</td>
+      <td>Total global control</td>
+    </tr>
+
+    <tr>
+      <td><strong>Components Used</strong></td>
+      <td>Moisture sensors, pump</td>
+      <td>Advanced sensors, control dial</td>
+      <td>Cloud module, precision pumps</td>
+    </tr>
+
+    <tr>
+      <td><strong>Water Capacity</strong></td>
+      <td>Standard reservoir</td>
+      <td>Larger reservoir</td>
+      <td>Largest extended reservoir</td>
+    </tr>
+  </table>
+</div>
+
+<footer>© 2026 AgroSmart. All rights reserved.</footer>
+
+</body>
+</html>

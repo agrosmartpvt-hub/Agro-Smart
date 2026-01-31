@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact | AgroSmart</title>
+
+<style>
+body{
+  margin:0;
+  font-family:Inter,Segoe UI,sans-serif;
+  background:#f4faf5;
+}
+
+/* NAVBAR */
+nav{
+  background:white;
+  padding:15px 40px;
+  display:flex;
+  justify-content:center;
+  gap:30px;
+  box-shadow:0 4px 12px rgba(0,0,0,.06);
+}
+nav a{
+  text-decoration:none;
+  color:#222;
+  font-weight:500;
+}
+nav a:hover{color:#2e7d32}
+
+/* PAGE */
+.container{
+  max-width:1100px;
+  margin:auto;
+  padding:60px 20px;
+}
+h1{text-align:center}
+.subtitle{text-align:center;color:#555;margin-bottom:50px}
+
+.grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:30px;
+}
+
+/* FORM */
+form{
+  background:white;
+  padding:30px;
+  border-radius:16px;
+  box-shadow:0 10px 30px rgba(0,0,0,.08);
+}
+input,textarea{
+  width:100%;
+  padding:14px;
+  margin-bottom:15px;
+  border-radius:10px;
+  border:1px solid #ccc;
+}
+button{
+  background:#2e7d32;
+  color:white;
+  border:none;
+  padding:14px;
+  width:100%;
+  border-radius:12px;
+  cursor:pointer;
+}
+
+/* INFO BOX */
+.info{
+  background:white;
+  padding:30px;
+  border-radius:16px;
+  box-shadow:0 10px 30px rgba(0,0,0,.08);
+}
+.placeholder{
+  background:#eee;
+  border-radius:12px;
+  height:140px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  margin-top:20px;
+  color:#777;
+}
+
+@media(max-width:800px){
+  .grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+
+<body>
+
+<!-- MENU -->
+<nav>
+  <a href="Products.html">Product</a>
+  <a href="Vision.html">Vision</a>
+  <a href="#">App</a>
+  <a href="#">Order</a>
+  <a href="index.html">Home</a>
+</nav>
+
+<div class="container">
+<h1>Contact AgroSmart</h1>
+<p class="subtitle">We’ll get back to you shortly</p>
+
+<div class="grid">
+
+<!-- FORM -->
+<form action="https://formsubmit.co/AgroSmart.pvt@gmail.com" method="POST">
+  <input type="hidden" name="_captcha" value="false">
+  <input type="hidden" name="_subject" value="New AgroSmart Contact">
+  <input type="hidden" name="_next" value="https://AgroSmart2.com/Thankyou.html">
+
+  <input type="text" name="name" placeholder="Your Name" required>
+  <input type="email" name="email" placeholder="Your Email" required>
+  <input type="tel" name="phone" placeholder="Phone / WhatsApp">
+  <textarea name="message" placeholder="Your Message" required></textarea>
+
+  <button type="submit">Submit</button>
+</form>
+
+<!-- INFO -->
+<div class="info">
+  <h3>AgroSmart Pvt. Ltd.</h3>
+  <p>📍 India</p>
+  <p>📧 agrosmart.pvt@gmail.com</p>
+  <p>📞 +91-XXXXXXXXXX</p>
+
+  <div class="placeholder">Image here</div>
+  <div class="placeholder">Video here</div>
+</div>
+
+</div>
+</div>
+
+</body>
+</html>
+
+

@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Pot Pro Max | AgroSmart</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg:#f0f8f5;
+      --text:#0f2d1c;
+      --muted:#4b5a4d;
+      --card:#e6f2ea;
+      --accent:#2e7d32;
+      --radius:22px;
+    }
+
+    *{box-sizing:border-box;margin:0;padding:0}
+
+    body{
+      font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;
+      background:var(--bg);
+      color:var(--text);
+    }
+
+    nav{
+      position:sticky;
+      top:0;
+      background:rgba(240,248,245,.9);
+      backdrop-filter:blur(14px);
+      border-bottom:1px solid #cde1d4;
+      z-index:10;
+    }
+
+    .nav-inner{
+      max-width:1200px;
+      margin:auto;
+      padding:14px 24px;
+      display:flex;
+      justify-content:center;
+      gap:18px;
+      font-weight:500;
+    }
+
+    .nav-inner a{
+      color:var(--accent);
+      text-decoration:none;
+      position:relative;
+      font-size:14px;
+    }
+
+    .nav-inner a::after{
+      content:"";
+      position:absolute;
+      left:0;
+      bottom:-4px;
+      width:0;
+      height:2px;
+      background:var(--accent);
+      transition:width .3s ease;
+    }
+
+    .nav-inner a:hover::after{width:100%;}
+
+    .hero{
+      min-height:70vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      padding:60px 24px;
+    }
+
+    .hero h1{
+      font-size:clamp(46px,6vw,82px);
+      margin-bottom:16px;
+      animation:fadeUp 1s ease forwards;
+    }
+
+    .hero p{
+      max-width:780px;
+      margin:auto;
+      font-size:18px;
+      color:var(--muted);
+      line-height:1.6;
+      animation:fadeUp 1.2s ease forwards;
+    }
+
+    .media-section{
+      max-width:1200px;
+      margin:auto;
+      padding:80px 24px;
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+      gap:32px;
+    }
+
+    .media-box{
+      background:var(--card);
+      border-radius:var(--radius);
+      padding:24px;
+      text-align:center;
+      box-shadow:0 16px 40px rgba(0,0,0,.08);
+      animation:fadeUp 1s ease forwards;
+      transition:transform .4s ease;
+    }
+
+    .media-box:hover{transform:translateY(-8px);}
+
+    .placeholder{
+      height:180px;
+      background:#d3ead8;
+      border-radius:16px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      color:#4b5a4d;
+      margin-bottom:14px;
+      font-size:14px;
+    }
+
+    .info-section{
+      max-width:1000px;
+      margin:auto;
+      padding:40px 24px 80px;
+      text-align:center;
+    }
+
+    .info-section h2{
+      font-size:34px;
+      margin-bottom:28px;
+      animation:fadeUp 1s ease forwards;
+    }
+
+    .info-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+      gap:28px;
+    }
+
+    .info-card{
+      background:var(--card);
+      border-radius:var(--radius);
+      padding:28px;
+      box-shadow:0 14px 36px rgba(0,0,0,.08);
+      animation:fadeUp 1.2s ease forwards;
+    }
+
+    .info-card h4{margin-bottom:10px;font-size:18px;}
+    .info-card p{font-size:15px;color:var(--muted);line-height:1.6;}
+
+    .price{
+      margin-top:46px;
+      font-size:38px;
+      font-weight:700;
+      color:var(--accent);
+      animation:fadeUp 1.4s ease forwards;
+    }
+
+    footer{
+      background:#dff3e0;
+      text-align:center;
+      padding:36px 24px;
+      font-size:14px;
+      color:#4b5a4d;
+    }
+
+    @keyframes fadeUp{
+      from{opacity:0;transform:translateY(20px)}
+      to{opacity:1;transform:translateY(0)}
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="nav-inner">
+      <a href="index.html">Home</a>
+      <a href="Products.html">Products</a>
+      <a href="Vision.html">Vision</a>
+      <a href="#app">App</a>
+      <a href="#order">Order</a>
+      <a href="Contact.html">Contact</a>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div>
+      <h1>Smart Pot Pro Max</h1>
+      <p>
+        The ultimate plant‑care system. Smart Pot Pro Max gives you total control — anywhere in the world.
+        Bigger capacity, smarter automation, and complete remote freedom.
+      </p>
+    </div>
+  </section>
+
+  <section class="media-section">
+    <div class="media-box">
+      <div class="placeholder">Video here</div>
+      <h3>Pro Max in Action</h3>
+    </div>
+    <div class="media-box">
+      <div class="placeholder">Image here</div>
+      <h3>Flagship Pro Max Design</h3>
+    </div>
+  </section>
+
+  <section class="info-section">
+    <h2>Why Smart Pot Pro Max is Unmatched</h2>
+
+    <div class="info-grid">
+      <div class="info-card">
+        <h4>Largest Water Reservoir</h4>
+        <p>The biggest reservoir in the lineup — supports long vacations and extreme plant needs.</p>
+      </div>
+
+      <div class="info-card">
+        <h4>Global Remote Control</h4>
+        <p>Control watering from anywhere on the planet — even from a different continent.</p>
+      </div>
+
+      <div class="info-card">
+        <h4>Custom Watering Schedules</h4>
+        <p>Create precise schedules for different plants, seasons, and growth stages.</p>
+      </div>
+
+      <div class="info-card">
+        <h4>Full Manual + Auto Override</h4>
+        <p>Switch instantly between intelligent automation and full manual control.</p>
+      </div>
+
+      <div class="info-card">
+        <h4>Premium Smart Components</h4>
+        <p>Advanced sensors, Wi‑Fi module, high‑precision pumps, and cloud‑connected intelligence.</p>
+      </div>
+
+      <div class="info-card">
+        <h4>Customizable Pro Aesthetics</h4>
+        <p>Luxury finishes, modular shells, and design options built to enhance plant beauty.</p>
+      </div>
+    </div>
+
+    <div class="price">₹11,000 /‑</div>
+  </section>
+
+  <footer>© 2026 AgroSmart. All rights reserved.</footer>
+
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AgroSmart | You may forget, but our machines won’t 🌱</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#f0f8f5;
+      --text:#0f2d1c;
+      --muted:#4b5a4d;
+      --card:#e6f2ea;
+      --radius:22px;
+      --accent:#2e7d32;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--bg);color:var(--text);-webkit-font-smoothing:antialiased;}
+    a{color:inherit;text-decoration:none}
+
+    nav{position:sticky;top:0;z-index:100;background:rgba(240,248,245,.9);backdrop-filter:saturate(180%) blur(14px);border-bottom:1px solid #cde1d4;}
+    .nav-inner{max-width:1200px;margin:auto;padding:14px 24px;display:flex;align-items:center;justify-content:center;}
+
+    .hero{min-height:92vh;display:flex;align-items:flex-start;justify-content:center;text-align:center;padding:20px 24px 80px;}
+    .hero h1{font-size:clamp(40px,6vw,72px);font-weight:700;letter-spacing:-0.03em;}
+
+    .logo-box{width:96px;height:96px;margin:36px auto 14px;background:var(--card);border-radius:20px;display:flex;align-items:center;justify-content:center;box-shadow:0 16px 40px rgba(0,0,0,.08);transition:transform .3s ease;}
+    .logo-box img{width:60%;height:60%;object-fit:contain;}
+    .logo-box:hover{transform:scale(1.05);}
+
+    .mini-nav{margin:0 auto 0;padding:10px 18px;background:rgba(230,245,235,.9);backdrop-filter:blur(12px);border-radius:16px;display:inline-flex;gap:18px;box-shadow:0 12px 30px rgba(0,0,0,.08);animation:fadeUp .9s ease both;}
+    .mini-nav a{font-size:14px;font-weight:500;color:#2e7d32;position:relative;}
+    .mini-nav a::after{content:"";position:absolute;left:0;bottom:-6px;width:0;height:2px;background:var(--accent);transition:width .3s ease;}
+    .mini-nav a:hover::after{width:100%;}
+
+    .popular-product{max-width:520px;margin:18px auto 0;background:linear-gradient(180deg,#dff3e0,#cde9d7);border-radius:18px;padding:18px 18px 16px;box-shadow:0 14px 34px rgba(0,0,0,.08);text-align:center;animation:fadeUp .9s ease both;transition:transform .3s ease, box-shadow .3s ease;}
+    .popular-product:hover{transform:translateY(-4px);box-shadow:0 20px 50px rgba(0,0,0,.12);}
+    .popular-tag{display:inline-block;font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-bottom:6px;}
+    .popular-product h2{font-size:20px;font-weight:600;letter-spacing:-0.02em;margin-bottom:4px;}
+    .popular-product p{display:none;}
+    .popular-image{margin:10px auto 0;width:220px;height:140px;background:#d3ead8;border-radius:14px;display:flex;align-items:center;justify-content:center;color:#4b5a4d;font-size:13px;transition:transform .3s ease;}
+    .popular-image:hover{transform:scale(1.05);}
+
+    .more-btn{display:inline-block;margin:12px auto 0;padding:10px 28px;font-size:15px;font-weight:600;border-radius:24px;background:#e6f2ea;color:#2e7d32;text-align:center;cursor:pointer;transition:transform .3s ease,box-shadow .3s ease;position:relative;}
+    .more-btn::after{content:'';position:absolute;left:0;bottom:0;width:0;height:2px;background:var(--accent);transition:width .3s ease;}
+    .more-btn:hover{transform:translateY(-2px);box-shadow:0 6px 16px rgba(0,0,0,.1);}
+    .more-btn:hover::after{width:100%;}
+
+    .problem-section, .solution-section{display:flex;flex-wrap:wrap;gap:28px;justify-content:center;margin-top:40px;text-align:center;}
+    .problem-text, .problem-image, .solution-text, .solution-image{flex:1;min-width:280px;background:var(--card);padding:24px;border-radius:18px;box-shadow:0 14px 34px rgba(0,0,0,.06);animation:fadeUp .9s ease both;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;}
+    .problem-text h3, .solution-text h3{font-size:20px;margin-bottom:12px;text-align:center;}
+    .problem-text p, .solution-text p{color:var(--muted);font-size:15px;line-height:1.6;text-align:center;}
+    .problem-image, .solution-image{height:180px;background:#d3ead8;color:#4b5a4d;font-size:14px;}
+
+    .explore-btn{display:inline-block;margin:40px auto 4px;padding:12px 36px;font-size:16px;font-weight:600;border-radius:28px;background:#e6f2ea;color:#2e7d32;text-align:center;cursor:pointer;transition:transform .3s ease,box-shadow .3s ease;position:relative;animation:fadeUp 1s ease forwards;}
+    .explore-btn::after{content:'';position:absolute;left:0;bottom:0;width:0;height:2px;background:var(--accent);transition:width .3s ease;}
+    .explore-btn:hover{transform:translateY(-2px);box-shadow:0 6px 16px rgba(0,0,0,.1);}
+    .explore-btn:hover::after{width:100%;}
+
+    @keyframes fadeUp{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+
+    footer{background:#dff3e0;padding:20px 24px 40px;font-size:14px;color:#4b5a4d;text-align:center;}
+  </style>
+</head>
+<body>
+
+  <nav><div class="nav-inner"><strong style="font-size:18px;letter-spacing:0.04em;">AgroSmart</strong></div></nav>
+
+  <div class="logo-box"><img src="assets/images/logo.png" alt="AgroSmart logo"></div>
+
+  <div style="text-align:center;"><div class="mini-nav">
+      <a href="Products.html">Products</a>
+      <a href="Vision.html">Vision</a>
+      <a href="#app">App</a>
+      <a href="#order">Order</a>
+      <a href="Contact.html">Contact</a>
+    </div></div>
+
+  <div class="hero">
+    <div>
+      <h1>You may forget.<br>But our machines won’t 🌱</h1>
+
+      <div class="popular-product" id="smartpot">
+        <div class="popular-tag">Most Popular</div>
+        <h2>Smart Pot Pro</h2>
+        <div class="popular-image">Smart Pot Pro image</div>
+        <a href="SmartPotPro.html" class="more-btn">More</a>
+      </div>
+
+      <div class="problem-section">
+        <div class="problem-text">
+          <h3>Plant Enthusiasts When Travelling</h3>
+          <p>Plants can suffer when their owners travel. Common issues include overwatering, underwatering, missed schedules, and security risks when leaving keys with helpers. Many worry about losing rare or sentimental plants, making travel stressful instead of enjoyable.</p>
+        </div>
+        <div class="problem-image">Illustration / Image here</div>
+      </div>
+
+      <div class="solution-section">
+        <div class="solution-image">Illustration / Image here</div>
+        <div class="solution-text">
+          <h3>We Solve Your Problem</h3>
+          <p>Our smart systems ensure your plants are cared for automatically, preventing overwatering, underwatering, and missed schedules. You can travel worry-free knowing your plants are safe and thriving.</p>
+        </div>
+      </div>
+
+      <a href="ComparativeAnalysis.html" class="explore-btn">Explore More</a>
+
+    </div>
+  </div>
+
+  <footer>
+    <div>© 2026 AgroSmart. All rights reserved.</div>
+    <div>Designed with purpose.</div>
+  </footer>
+
+</body>
+</html>
+
